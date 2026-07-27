@@ -35,7 +35,7 @@ class QuickShareIcon extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: AppColors.greyText.withOpacity(.5), // Inner color stays unchanged
+            color: AppColors.greyText.withOpacity(.5),
           ),
           child: Padding(
             padding: EdgeInsets.all(ringColor != null ? 4 : 6),

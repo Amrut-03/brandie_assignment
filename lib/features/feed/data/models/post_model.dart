@@ -13,12 +13,12 @@ class CaptionModel extends CaptionEntity {
     );
   }
 
-  Map<String, dynamic> toJson() {
-    return {
-      'text': text,
-      'isBold': isBold,
-    };
-  }
+  // Map<String, dynamic> toJson() {
+  //   return {
+  //     'text': text,
+  //     'isBold': isBold,
+  //   };
+  // }
 }
 
 class PostModel extends PostEntity {
@@ -44,19 +44,19 @@ class PostModel extends PostEntity {
     );
   }
 
-  Map<String, dynamic> toJson() {
-    return {
-      'post': post,
-      'musicLabel': musicLabel,
-      'musicHighlight': musicHighlight,
-      'musicSuffix': musicSuffix,
-      'caption': caption
-          .map((e) => {
-        'text': e.text,
-        'isBold': e.isBold,
-      })
-          .toList(),
-      'referralCode': referralCode,
-    };
-  }
+  // Map<String, dynamic> toJson() {
+  //   return {
+  //     'post': post,
+  //     'musicLabel': musicLabel,
+  //     'musicHighlight': musicHighlight,
+  //     'musicSuffix': musicSuffix,
+  //     'caption': caption
+  //         .map((e) => {
+  //       'text': e.text,
+  //       'isBold': e.isBold,
+  //     })
+  //         .toList(),
+  //     'referralCode': referralCode,
+  //   };
+  // }
 }

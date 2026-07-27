@@ -50,6 +50,14 @@ class _FeedScreenState extends State<FeedScreen> {
       backgroundColor: AppColors.background,
       body: BlocBuilder<FeedCubit, FeedState>(
           builder: (context, state){
+            if (!state.postsLoaded) {
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            }
+
+            final posts = context.read<FeedCubit>().posts;
+
             return SafeArea(
               bottom: false,
               child: Column(
@@ -122,17 +130,7 @@ class _FeedScreenState extends State<FeedScreen> {
                       ],
                     ),
                   if(state.showFeed)
-                    BlocBuilder<FeedCubit, FeedState>(
-                      builder: (context, state) {
-                        if (!state.postsLoaded) {
-                          return const Center(
-                            child: CircularProgressIndicator(),
-                          );
-                        }
-
-                        final posts = context.read<FeedCubit>().posts;
-
-                        return Expanded(
+                    Expanded(
                           child: Stack(
                             fit: StackFit.expand,
                             children: [
@@ -285,8 +283,6 @@ class _FeedScreenState extends State<FeedScreen> {
                               ),
                             ],
                           ),
-                        );
-                      },
                     )
                 ],
               ),

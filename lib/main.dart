@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/di/injection.dart';
 import 'core/theme/app_theme.dart';
-import 'features/feed/data/repositories/feed_repositroy_impl.dart';
 import 'features/feed/presentation/cubit/feed_cubit.dart';
 import 'features/feed/presentation/screens/feed_screen.dart';
 
